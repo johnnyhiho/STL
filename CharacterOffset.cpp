@@ -1,9 +1,0 @@
-class invalidCharacterExcpeption
-{
-
-};
-
-class invalidRangeException
-{
-
-};

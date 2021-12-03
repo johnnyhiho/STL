@@ -2,7 +2,6 @@
 //
 
 #include <iostream>
-#include "CharacterOffset.cpp"
 using namespace std;
 
 char character(char start, int offset);
@@ -14,36 +13,10 @@ int main()
     cout << character('Z', -1) << endl;
     cout << character('?', 5) << endl;
     cout << character('A', 32) << endl;
-    system("pause");
-    return 0;
 }
 
 char character(char start, int offset) {
-    int startAsciiValue = int(start);
-    int target = startAsciiValue + offset;
 
-
-    try {
-        if (startAsciiValue < 65 || (startAsciiValue > 90 && startAsciiValue < 97) || startAsciiValue > 122)
-        {
-            throw invalidCharacterExcpeption();
-        }
-        else if (target < 65 || (target > 90 && target < 97) || target > 122)
-        {
-            throw invalidRangeException();
-        }
-    }
-    catch (invalidCharacterExcpeption exception1)
-    {
-        cout << " Invalid Character Exception " << endl;
-        return ' ';
-    }
-    catch (invalidRangeException exception2)
-    {
-        cout << " Invalid Range Exception " << endl;
-        return ' ';
-    }
-    return char(target);
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
